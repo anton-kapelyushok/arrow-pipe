@@ -1,0 +1,15 @@
+{
+  "name": "Arrow Pipe",
+  "version": "0.0.1",
+  "description": "Play/Pause key listener",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts" : [{
+    "matches": ["https://play.google.com/music/*"],
+    "js": ["google-play.js"]
+  }],
+  "optional_permissions": ["tabs", "http:/localhost:8080/"]
+}
